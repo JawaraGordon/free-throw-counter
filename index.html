@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css">
     <title>Iterating Through Life</title>
   </head>
   <body>
     <div id="message-container">
 
     </div>
-    <form>
+    <form class="form-container" id="form">
       Goal<input class="form-input" type="number" name="goal" id="goal" /><br />
       Made<input class="form-input" type="number" name="made" id="made" /><br />
       Missed<input class="form-input" type="number" name="missed" id="missed" /><br />
-      <button>
+      <form class="btn-container">
+      <button class="btn">
         Submit
       </button>
-    </form>
-    <button id="reset">
-        Reset
-     </button>
+      <input type="button" class="btn" id="reset" value="Reset">
+        </input>
+    </div>
     </form>
     <script src="./index.js"></script>
   </body>

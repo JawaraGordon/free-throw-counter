@@ -40,7 +40,7 @@ function freeThrowCounter(goal, made, missed) {
   }
 }
 // select form from DOM
-const form = document.querySelector('form');
+const form = document.getElementById('form');
 
 // add event handler
 form.addEventListener('submit', function (e) {
@@ -58,17 +58,19 @@ function submitForm() {
   freeThrowCounter(goal, made, missed);
 }
 
-// function to reset arrays and message
+// function to reset arrays
 function resetArrays() {
   freeThrowGoal.length = 0;
   freeThrowGoal.length = 0;
   freeThrowMissed.length = 0;
-  document.querySelector('#message-container').innerHTML = '';
 }
 // select reset button
 const reset = document.querySelector('#reset');
-// add reset event handler
+// add reset event handler for arrays message and inputs
 reset.addEventListener('click', function () {
   resetArrays();
-  form.reset();
+  document.querySelector('#message-container').innerHTML = '';
+  document.querySelector('#goal').value = '';
+  document.querySelector('#made').value = '';
+  document.querySelector('#missed').value = '';
 });

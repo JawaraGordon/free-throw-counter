@@ -2,3 +2,33 @@
     box-sizing: border-box;
     margin: 0%;
 }
+
+#message-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input{
+    width: 50%;
+}
+
+.form-container .btn{
+    padding: .5rem;
+    margin: .2rem;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
