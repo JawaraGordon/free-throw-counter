@@ -30,13 +30,13 @@ function freeThrowCounter(goal, made, missed) {
   const message = document.querySelector('#message-container');
   //   conditional logic to display results message
   if (freeThrowMade >= freeThrowGoal) {
-    message.append(`YOU'RE ON 🔥🔥🔥`);
+    message.innerHTML = `YOU'RE ON 🔥🔥🔥`;
   } else if (freeThrowMissed > freeThrowMade) {
-    message.append('Better luck next time...');
+    message.innerHTML = 'Better luck next time...';
   } else if (freeThrowMissed < freeThrowMade) {
-    message.append('Keep up the good work!');
+    message.innerHTML = 'Keep up the good work!';
   } else if (freeThrowMissed <= freeThrowMade) {
-    message.append('Not bad, but keep practicing.');
+    message.innerHTML = 'Not bad, but keep practicing.';
   }
 }
 // select form from DOM
@@ -58,11 +58,12 @@ function submitForm() {
   freeThrowCounter(goal, made, missed);
 }
 
-// function to reset arrays
+// function to reset arrays and message
 function resetArrays() {
   freeThrowGoal.length = 0;
   freeThrowGoal.length = 0;
   freeThrowMissed.length = 0;
+  document.querySelector('#message-container').innerHTML = '';
 }
 // select reset button
 const reset = document.querySelector('#reset');
