@@ -1,11 +1,8 @@
 // initiate empty arrays
-
 const freeThrowGoal = [];
 const freeThrowMade = [];
 const freeThrowMissed = [];
-
 // create a function to handle goal, made, and missed TFs
-
 function freeThrowCounter(goal, made, missed) {
   // function to add numbers to arrays
 
@@ -48,7 +45,6 @@ function freeThrowCounter(goal, made, missed) {
 }
 // select form from DOM
 const form = document.getElementById('form');
-
 // add event handler
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -70,7 +66,6 @@ function submitForm() {
   // add inputs to counter function
   freeThrowCounter(goal, made, missed);
 }
-
 // function to reset arrays
 function resetArrays() {
   freeThrowGoal.length = 0;
