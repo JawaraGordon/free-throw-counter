@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Iterating Through Life</title>
   </head>
-  <body>
+  <body class="color-change-3x">
+    <div id="overlay"></div>
     <div id="message-container">
 
     </div>
@@ -16,7 +21,7 @@
       Made<input class="form-input" type="number" min="0" max="500" name="made" id="made" /><br />
       Missed<input class="form-input" type="number" min="0" max="500" name="missed" id="missed" /><br />
       <div class="btn-container">
-      <button class="btn">
+      <button class="btn" >
         Submit
       </button>
       <input type="button" class="btn" id="reset" value="Reset">

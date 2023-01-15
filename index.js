@@ -21,15 +21,18 @@ function freeThrowCounter(goal, made, missed) {
   freeThrowMade.push(addToArray(made));
   freeThrowMissed.push(addToArray(missed));
 
-  //   loop through arrays to log results
-  for (let i = 0; i < freeThrowGoal.length; i++) {}
-  for (let i = 0; i < freeThrowMade.length; i++) {}
-  for (let i = 0; i < freeThrowMissed.length; i++) {}
+  //   loop through arrays to log results for graph
+  //   for (let i = 0; i < freeThrowGoal.length; i++) {}
+  //   for (let i = 0; i < freeThrowMade.length; i++) {}
+  //   for (let i = 0; i < freeThrowMissed.length; i++) {}
 
   // select message div from DOM
   const message = document.querySelector('#message-container');
   //   conditional logic to display results message
-  if (freeThrowMade >= freeThrowGoal) {
+
+  if (freeThrowGoal <= 0) {
+    message.innerHTML = '';
+  } else if (freeThrowMade >= freeThrowGoal) {
     message.innerHTML = `YOU'RE ON 🔥🔥🔥`;
   } else if (freeThrowMissed > freeThrowMade) {
     message.innerHTML = 'Better luck next time...';
@@ -38,6 +41,10 @@ function freeThrowCounter(goal, made, missed) {
   } else if (freeThrowMissed <= freeThrowMade) {
     message.innerHTML = 'Not bad, but keep practicing.';
   }
+
+  console.log(freeThrowGoal);
+  console.log(freeThrowMade);
+  console.log(freeThrowMissed);
 }
 // select form from DOM
 const form = document.getElementById('form');
@@ -53,7 +60,13 @@ function submitForm() {
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
   const missed = document.getElementById('missed').value;
-
+  document.querySelector('.btn').classList.add('bounce-top');
+  document
+    .querySelector('#message-container')
+    .classList.add('tracking-in-contract-bck');
+  document
+    .querySelector('.form-container')
+    .classList.remove('slide-in-blurred-top');
   // add inputs to counter function
   freeThrowCounter(goal, made, missed);
 }
@@ -61,7 +74,7 @@ function submitForm() {
 // function to reset arrays
 function resetArrays() {
   freeThrowGoal.length = 0;
-  freeThrowGoal.length = 0;
+  freeThrowMade.length = 0;
   freeThrowMissed.length = 0;
 }
 // select reset button
@@ -70,7 +83,14 @@ const reset = document.querySelector('#reset');
 reset.addEventListener('click', function () {
   resetArrays();
   document.querySelector('#message-container').innerHTML = '';
+  document
+    .querySelector('#message-container')
+    .classList.remove('tracking-in-contract-bck');
   document.querySelector('#goal').value = '';
   document.querySelector('#made').value = '';
   document.querySelector('#missed').value = '';
+  document.querySelector('.btn').classList.remove('bounce-top');
+  document
+    .querySelector('.form-container')
+    .classList.add('slide-in-blurred-top');
 });
