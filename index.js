@@ -1,4 +1,4 @@
-// initiate empty arrays
+// initialize empty arrays
 const freeThrowGoal = [];
 const freeThrowMade = [];
 const freeThrowMissed = [];
