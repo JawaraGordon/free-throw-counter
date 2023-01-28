@@ -2,6 +2,7 @@
 const freeThrowGoal = [];
 const freeThrowMade = [];
 const freeThrowMissed = [];
+
 // create a function to handle goal, made, and missed TFs
 function freeThrowCounter(goal, made, missed) {
   // function to add numbers to arrays
@@ -17,6 +18,19 @@ function freeThrowCounter(goal, made, missed) {
   freeThrowGoal.push(addToArray(goal));
   freeThrowMade.push(addToArray(made));
   freeThrowMissed.push(addToArray(missed));
+
+  // instantiate score obj display score
+
+  let scoreboard = new Score(0, 'High Score:');
+
+  console.log(freeThrowMade);
+
+  console.log(scoreboard.count, scoreboard.message);
+  const score = document.getElementById('score');
+  score.append(scoreboard.message);
+
+  const highScore = document.getElementById('high-score');
+  highScore.append(scoreboard.count);
 
   //   loop through arrays to log results for graph
   //   for (let i = 0; i < freeThrowGoal.length; i++) {}
@@ -38,10 +52,6 @@ function freeThrowCounter(goal, made, missed) {
   } else if (freeThrowMissed <= freeThrowMade) {
     message.innerHTML = 'Not bad, but keep practicing.';
   }
-
-  console.log(freeThrowGoal);
-  console.log(freeThrowMade);
-  console.log(freeThrowMissed);
 }
 // select form from DOM
 const form = document.getElementById('form');
