@@ -12,22 +12,27 @@ function freeThrowCounter(goal, made, missed) {
     for (let i = 0; i < num; i++) {
       arr[i] = i + 1;
     }
+
     return arr;
   };
+
   // add params to arrays
   freeThrowGoal.push(addToArray(goal));
   freeThrowMade.push(addToArray(made));
   freeThrowMissed.push(addToArray(missed));
 
   // instantiate score obj display score
-
   let scoreboard = new Score(0, 'High Score:');
 
-  console.log(freeThrowMade);
-
-  console.log(scoreboard.count, scoreboard.message);
   const score = document.getElementById('score');
   score.append(scoreboard.message);
+
+  // array to handle made shots for scoreboard
+  const madeResult = addToArray(made);
+
+  for (let i = 0; i < madeResult.length; i++) {
+    scoreboard.increment();
+  }
 
   const highScore = document.getElementById('high-score');
   highScore.append(scoreboard.count);
@@ -53,6 +58,7 @@ function freeThrowCounter(goal, made, missed) {
     message.innerHTML = 'Not bad, but keep practicing.';
   }
 }
+
 // select form from DOM
 const form = document.getElementById('form');
 // add event handler
