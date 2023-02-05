@@ -88,11 +88,19 @@ function resetArrays() {
   freeThrowMade.length = 0;
   freeThrowMissed.length = 0;
 }
+// function to reset scoreboard
+function resetScoreboard() {
+  const highScore = document.getElementById('high-score');
+  highScore.innerText = '';
+  const score = document.getElementById('score');
+  score.innerText = '';
+}
 // select reset button
 const reset = document.querySelector('#reset');
 // add reset event handler for arrays message and inputs
 reset.addEventListener('click', function () {
   resetArrays();
+  resetScoreboard();
   document.querySelector('#message-container').innerHTML = '';
   document
     .querySelector('#message-container')
@@ -105,3 +113,11 @@ reset.addEventListener('click', function () {
     .querySelector('.form-container')
     .classList.add('slide-in-blurred-top');
 });
+
+// create conditional to reset inputs if <= 0
+// if (goal && made && missed <= 0) {
+//   setTimeout(() => {
+//     resetArrays();
+//     resetScoreboard();
+//   }, 500);
+// }
