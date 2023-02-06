@@ -120,8 +120,6 @@ const resetScoreboardValues = () => {
   const made = document.querySelector('#made').value;
   const missed = document.querySelector('#missed').value;
 
-  console.log('goal', goal);
-
   if (made === '') {
     setTimeout(() => {
       resetArrays();
@@ -132,6 +130,5 @@ const resetScoreboardValues = () => {
 
 // timer that will reset scoreboard values after 1 second if input value for made === ''
 setInterval(() => {
-  console.log('resetScoreboard');
   resetScoreboardValues();
 }, 1000);
