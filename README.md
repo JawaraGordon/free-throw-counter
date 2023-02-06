@@ -6,10 +6,10 @@
 
 ## Features
 
-Set a goal for free throw attempts
-Input made and missed attempts
-Track progress towards goal
-User-friendly interface
+- Set a goal for free throw attempts
+- Input made and missed attempts
+- Track progress towards goal
+  User-friendly interface
 
 ## Version 0.2 Updates
 
