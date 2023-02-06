@@ -114,10 +114,24 @@ reset.addEventListener('click', function () {
     .classList.add('slide-in-blurred-top');
 });
 
-// create conditional to reset inputs if <= 0
-// if (goal && made && missed <= 0) {
-//   setTimeout(() => {
-//     resetArrays();
-//     resetScoreboard();
-//   }, 500);
-// }
+// function with conditional to reset made input value === ''
+const resetScoreboardValues = () => {
+  const goal = document.querySelector('#goal').value;
+  const made = document.querySelector('#made').value;
+  const missed = document.querySelector('#missed').value;
+
+  console.log('goal', goal);
+
+  if (made === '') {
+    setTimeout(() => {
+      resetArrays();
+      resetScoreboard();
+    }, 1000);
+  }
+};
+
+// timer that will reset scoreboard values after 1 second if input value for made === ''
+setInterval(() => {
+  console.log('resetScoreboard');
+  resetScoreboardValues();
+}, 1000);
