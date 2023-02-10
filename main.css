@@ -63,6 +63,7 @@ body{
 
 .form-input{
     width: 50%;
+    max-width: 16rem;
     height: 2rem;
     padding: .5rem;
     border-radius: 1rem;
