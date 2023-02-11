@@ -26,7 +26,11 @@
         <div id="high-score">&nbsp</div>
     </div>
     <div class="chart-btn-container">
-        <button onclick="toggleChart()" id="chart-toggle" >View Chart</button>
+        <label id="chart-toggle-label">Score Chart</label>
+        <label class="switch">
+            <input onclick="toggleChart()" id="chart-toggle" type="checkbox">
+            <span class="slider round"></span>
+          </label>
     </div>
     
     <div class="chart-container hidden">
