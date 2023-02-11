@@ -132,3 +132,19 @@ const resetScoreboardValues = () => {
 setInterval(() => {
   resetScoreboardValues();
 }, 1000);
+
+const toggleChart = () => {
+  const chartToggle = document.querySelector('#chart-toggle');
+  chartToggle.addEventListener('click', function () {
+    console.log('click');
+    const chartContainer = document.querySelector('.chart-container');
+    console.log(chartContainer.classList);
+    if (chartContainer.classList[1] === 'hidden') {
+      chartContainer.classList.remove('hidden');
+      chartContainer.classList.add('show');
+    } else {
+      chartContainer.classList.remove('show');
+      chartContainer.classList.add('hidden');
+    }
+  });
+};
