@@ -66,7 +66,7 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   submitForm();
 });
-// create submit event handler
+// create submit event handler / add inputs to counter and makes chart
 function submitForm() {
   // get the value of the input field
   const goal = document.getElementById('goal').value;
@@ -81,6 +81,7 @@ function submitForm() {
     .classList.remove('slide-in-blurred-top');
   // add inputs to counter function
   freeThrowCounter(goal, made, missed);
+
   makeChart(goal, made, missed);
 }
 // function to reset arrays
@@ -98,7 +99,7 @@ function resetScoreboard() {
 }
 // select reset button
 const reset = document.querySelector('#reset');
-// add reset event handler for arrays message and inputs
+// add reset event handler for arrays message, inputs and chart
 reset.addEventListener('click', function () {
   resetArrays();
   resetScoreboard();
@@ -113,6 +114,8 @@ reset.addEventListener('click', function () {
   document
     .querySelector('.form-container')
     .classList.add('slide-in-blurred-top');
+    
+  destroyChart();
 });
 
 // function with conditional to reset made input value === ''
@@ -142,8 +145,8 @@ const toggleChart = () => {
     const chartContainer = document.querySelector('.chart-container');
 
     if (
-      chartContainer.classList[1] === 'hidden' ||
-      chartToggle.checked === true
+      chartToggle.checked === true ||
+      chartContainer.classList[1] === 'hidden'
     ) {
       messageBoard.classList.remove('show');
       messageBoard.classList.add('hidden');
