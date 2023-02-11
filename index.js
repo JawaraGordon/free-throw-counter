@@ -81,6 +81,7 @@ function submitForm() {
     .classList.remove('slide-in-blurred-top');
   // add inputs to counter function
   freeThrowCounter(goal, made, missed);
+  makeChart(goal, made, missed);
 }
 // function to reset arrays
 function resetArrays() {
