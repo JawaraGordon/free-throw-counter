@@ -133,16 +133,21 @@ setInterval(() => {
   resetScoreboardValues();
 }, 1000);
 
+// toggles score chart view / shows & hides message board
 const toggleChart = () => {
   const chartToggle = document.querySelector('#chart-toggle');
+  const messageBoard = document.querySelector('#message-container');
   chartToggle.addEventListener('click', function () {
-    console.log('click');
     const chartContainer = document.querySelector('.chart-container');
-    console.log(chartContainer.classList);
+
     if (chartContainer.classList[1] === 'hidden') {
+      messageBoard.classList.remove('hidden');
+      messageBoard.classList.add('hidden');
       chartContainer.classList.remove('hidden');
       chartContainer.classList.add('show');
     } else {
+      messageBoard.classList.add('show');
+      messageBoard.classList.remove('hidden');
       chartContainer.classList.remove('show');
       chartContainer.classList.add('hidden');
     }
