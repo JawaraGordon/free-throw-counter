@@ -45,19 +45,22 @@ body{
 .score-chart{
     width: 20rem;
     margin: auto;
-    padding-top: 25vh;
+    padding-top: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
 }
 
-.btn-container{
+.chart-btn-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+   
+}
+#chart-toggle{
+    padding: .5rem;
+    border-radius: 1rem;
     z-index: 4;
 }
 .chart-container{
@@ -65,12 +68,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 4;
-}
-#chart-toggle{
-    padding: .5rem;
-    border-radius: 1rem;
-    z-index: 4;
+    z-index: 2;
 }
 
 .hidden{
@@ -98,11 +96,12 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 4;
+    padding-bottom: 1rem;
 }
 
 .form-input{
-    width: 100%;
-    max-width: 16rem;
+    width: 50%;
+    max-width: 10rem;
     height: 2rem;
     padding: .5rem;
     border-radius: 1rem;
@@ -127,7 +126,10 @@ body{
 .btn-container{
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+   
 }
 
 #overlay {
