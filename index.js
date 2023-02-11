@@ -114,7 +114,7 @@ reset.addEventListener('click', function () {
   document
     .querySelector('.form-container')
     .classList.add('slide-in-blurred-top');
-    
+
   destroyChart();
 });
 
@@ -143,6 +143,7 @@ const toggleChart = () => {
   const messageBoard = document.querySelector('#message-container');
   chartToggle.addEventListener('click', function () {
     const chartContainer = document.querySelector('.chart-container');
+    const formContainer = document.querySelector('.form-container');
 
     if (
       chartToggle.checked === true ||
@@ -152,11 +153,15 @@ const toggleChart = () => {
       messageBoard.classList.add('hidden');
       chartContainer.classList.remove('hidden');
       chartContainer.classList.add('show');
+      formContainer.classList.remove('show')
+      formContainer.classList.add('hidden')
     } else {
       messageBoard.classList.add('show');
       messageBoard.classList.remove('hidden');
       chartContainer.classList.remove('show');
       chartContainer.classList.add('hidden');
+      formContainer.classList.add('show')
+      formContainer.classList.remove('hidden')
     }
   });
 };
