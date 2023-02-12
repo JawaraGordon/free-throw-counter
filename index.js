@@ -72,16 +72,15 @@ function submitForm() {
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
   const missed = document.getElementById('missed').value;
+  // add animations to forms and message board
   document.querySelector('.btn').classList.add('bounce-top');
-  document
-    .querySelector('#message-container')
-    .classList.add('tracking-in-contract-bck');
-  document
-    .querySelector('.form-container')
-    .classList.remove('slide-in-blurred-top');
+  const messageContainer = document.querySelector('#message-container');
+  messageContainer.classList.add('tracking-in-contract-bck');
+  const formContainer = document.querySelector('.form-container');
+  formContainer.classList.remove('slide-in-blurred-top');
   // add inputs to counter function
   freeThrowCounter(goal, made, missed);
-
+  // create a chart from the submitted data
   makeChart(goal, made, missed);
 }
 // function to reset arrays
@@ -141,14 +140,11 @@ setInterval(() => {
 const toggleChart = () => {
   const chartToggle = document.querySelector('#chart-toggle');
   const messageBoard = document.querySelector('#message-container');
+  const chartContainer = document.querySelector('.chart-container');
+  const formContainer = document.querySelector('.form-container');
   chartToggle.addEventListener('click', function () {
-    const chartContainer = document.querySelector('.chart-container');
-    const formContainer = document.querySelector('.form-container');
-
-    if (
-      chartToggle.checked === true ||
-      chartContainer.classList[1] === 'hidden'
-    ) {
+    console.log('chart cont', chartContainer);
+    if (chartToggle.checked === true) {
       messageBoard.classList.remove('show');
       messageBoard.classList.add('hidden');
       chartContainer.classList.remove('hidden');

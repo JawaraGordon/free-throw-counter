@@ -124,7 +124,7 @@ body{
     justify-content: flex-end;
     margin-left: 80%;
     margin-right: 20%;
-   
+   z-index: 4;
 }
 
 #chart-toggle-label{
@@ -159,8 +159,8 @@ body{
     justify-content: center;
     align-items: center;
     margin: .3rem;
-    padding-top: 5vh;
-    padding-bottom: 1rem;
+    padding-top: 10%;
+    padding-bottom: 2rem;
     z-index: 1;
 }
 
