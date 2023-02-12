@@ -9,13 +9,23 @@
 - Set a goal for free throw attempts
 - Input made and missed attempts
 - Track progress towards goal
+- View your progress on a dynamic bar graph chart
 - User-friendly interface
 
-## Version 0.2 Updates
+## Version Updates
+
+### 0.1
 
 - Added a Scoreboard that displays your made shots
 - Created a function that resets the high-score on reset
+
+### 0.2
+
 - Updated the scoreboard to reset when the made shot input value is empty
+
+### 0.3
+
+- Added a chart that displays your free throw goal, made and missed attempts
 
 ### Getting Started
 

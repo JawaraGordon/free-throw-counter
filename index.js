@@ -144,7 +144,7 @@ const toggleChart = () => {
   const formContainer = document.querySelector('.form-container');
   chartToggle.addEventListener('click', function () {
     console.log('chart cont', chartContainer);
-    if (chartToggle.checked === true) {
+    if (chartToggle.checked === true || chartContainer.classList === 'hidden') {
       messageBoard.classList.remove('show');
       messageBoard.classList.add('hidden');
       chartContainer.classList.remove('hidden');
