@@ -10,6 +10,17 @@ const makeChart = (goal, made, missed) => {
 
   const scoreChartClassObj = new Chart(scoreChart, {
     type: 'bar',
+    options: {
+      animation: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          enabled: true,
+        },
+      },
+    },
     data: {
       labels: ['Goal', 'Made', 'Missed'],
       datasets: [
