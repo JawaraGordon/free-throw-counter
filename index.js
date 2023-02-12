@@ -153,15 +153,15 @@ const toggleChart = () => {
       messageBoard.classList.add('hidden');
       chartContainer.classList.remove('hidden');
       chartContainer.classList.add('show');
-      formContainer.classList.remove('show')
-      formContainer.classList.add('hidden')
+      formContainer.classList.remove('show');
+      formContainer.classList.add('hidden');
     } else {
       messageBoard.classList.add('show');
       messageBoard.classList.remove('hidden');
       chartContainer.classList.remove('show');
       chartContainer.classList.add('hidden');
-      formContainer.classList.add('show')
-      formContainer.classList.remove('hidden')
+      formContainer.classList.add('show');
+      formContainer.classList.remove('hidden');
     }
   });
 };
