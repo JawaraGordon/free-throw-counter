@@ -68,8 +68,12 @@ form.addEventListener('submit', function (e) {
 });
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
-  // reset high score display
-  const highScore = document.getElementById('score');
+  // block score and high-score from displaying more than once
+  const score = document.getElementById('score');
+  const highScore = document.getElementById('high-score');
+  if (score.innerText.length > 0) {
+    score.innerText = '';
+  }
   if (highScore.innerText.length > 0) {
     highScore.innerText = '';
   }
