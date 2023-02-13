@@ -3,7 +3,7 @@ const freeThrowGoal = [];
 const freeThrowMade = [];
 const freeThrowMissed = [];
 
-// create a function to handle goal, made, and missed TFs
+// function to handle goal, made, and missed TFs
 function freeThrowCounter(goal, made, missed) {
   // function to add numbers to arrays
 
@@ -68,6 +68,12 @@ form.addEventListener('submit', function (e) {
 });
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
+  // reset high score display
+  const highScore = document.getElementById('score');
+  if (highScore.innerText.length > 0) {
+    highScore.innerText = '';
+  }
+
   // get the value of the input field
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
