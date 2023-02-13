@@ -40,6 +40,7 @@ body{
     margin-left: 2rem;
     margin-top: 1rem;
     font-weight: 700;
+    z-index: 3;
 }
 
 
@@ -60,7 +61,7 @@ body{
     height: 0;
   }
   
-  /* The slider */
+  /* slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -99,7 +100,7 @@ body{
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
+  /* Rounded Slider */
   .slider.round {
     border-radius: 34px;
   }

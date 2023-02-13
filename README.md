@@ -27,6 +27,12 @@
 
 - Added a chart that displays your free throw goal, made and missed attempts
 
+### 0.4
+
+- Bug fixes:
+- Updated the high-score display to only show once
+- Updated the score display to only show once
+
 ### Getting Started
 
 Play the live demo here: https://jawaragordon.github.io/free-throw-counter/
