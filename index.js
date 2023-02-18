@@ -180,4 +180,7 @@ const toggleChart = () => {
   });
 };
 
+// toggle chart eventHandler 
+
+toggleChart()
 initDivs();
