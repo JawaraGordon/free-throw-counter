@@ -33,6 +33,12 @@
 - Updated the high-score display to only show once
 - Updated the score display to only show once
 
+### 0.5
+
+- Bug fixes:
+- Scoreboard spacing fixed
+- Toggle chart switch works on first attempt
+
 ### Getting Started
 
 Play the live demo here: https://jawaragordon.github.io/free-throw-counter/
