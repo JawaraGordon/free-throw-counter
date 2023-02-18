@@ -3,6 +3,14 @@ const freeThrowGoal = [];
 const freeThrowMade = [];
 const freeThrowMissed = [];
 
+// initialize message and form divs show / hidden class
+const initDivs = () => {
+  const message = document.querySelector('#message-container');
+  const form = document.querySelector('#form');
+  message.classList.add('show');
+  form.classList.add('show');
+};
+
 // function to handle goal, made, and missed TFs
 function freeThrowCounter(goal, made, missed) {
   // function to add numbers to arrays
@@ -171,3 +179,5 @@ const toggleChart = () => {
     }
   });
 };
+
+initDivs();
