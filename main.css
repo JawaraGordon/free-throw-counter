@@ -41,6 +41,7 @@ body{
     margin-top: 1rem;
     font-weight: 700;
     z-index: 3;
+    min-height: 28px;
 }
 
 
