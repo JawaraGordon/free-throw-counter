@@ -161,7 +161,6 @@ const toggleChart = () => {
   const chartContainer = document.querySelector('.chart-container');
   const formContainer = document.querySelector('.form-container');
   chartToggle.addEventListener('click', function () {
-    console.log('chart cont', chartContainer);
     if (chartToggle.checked === true || chartContainer.classList === 'hidden') {
       messageBoard.classList.remove('show');
       messageBoard.classList.add('hidden');
@@ -180,7 +179,7 @@ const toggleChart = () => {
   });
 };
 
-// toggle chart eventHandler 
+// toggle chart eventHandler
 
-toggleChart()
+toggleChart();
 initDivs();
