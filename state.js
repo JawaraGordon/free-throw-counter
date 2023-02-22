@@ -1,26 +1,33 @@
 // create a state management system for high scores
 const highScoreArr = [];
 
-// score must persist during game sessions
-highScoreArr.push();
+// create a func to handle high scores
 
-// scores can be stored for the duration of an individual session
-highScoreArr.forEach((highScore) => {
-  console.log(highScore);
-
+const highScoreHandler = () => {
   // fetch and display score from user input
-  const highScore = document.getElementById('high-score');
-  const score = document.getElementById('score');
+  const scoreNum = document.getElementById('made').value;
+  
 
-  // decide if the score is the highest score for that session
+  // score must persist during game sessions
+  highScoreArr.push(scoreNum);
 
-  if (score > highScore) {
-    const newHighScore = 0;
-    newHighScore = score;
+  console.log(highScoreArr);
 
-    // update scoreboard to display the current session high score
-    score.innerText = newHighScore;
+  // scores can be stored for the duration of an individual session
+  highScoreArr.forEach((highScore) => {
+    const highScoreboard = document.getElementById('high-score');
+    console.log(highScore);
 
-    return newHighScore;
-  }
-});
+    // decide if the score is the highest score for that session
+
+    if (scoreNum > highScore) {
+      
+      // update scoreboard to display the current session high score
+      highScoreboard.innerText = highScore;
+
+      
+    }
+  });
+};
+
+

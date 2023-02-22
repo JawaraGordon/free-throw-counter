@@ -79,6 +79,7 @@ function submitForm() {
   // block score and high-score from displaying more than once
   const score = document.getElementById('score');
   const highScore = document.getElementById('high-score');
+  highScoreHandler()
   if (score.innerText.length > 0) {
     score.innerText = '';
   }
