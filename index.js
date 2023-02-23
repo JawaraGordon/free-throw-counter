@@ -71,6 +71,8 @@ form.addEventListener('submit', function (e) {
 });
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
+
+  
   // block score and high-score from displaying more than once
   const score = document.getElementById('score');
   const highScore = document.getElementById('high-score');
@@ -86,6 +88,7 @@ function submitForm() {
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
   const missed = document.getElementById('missed').value;
+  createHighScore()
   // add animations to forms and message board
   document.querySelector('.btn').classList.add('bounce-top');
   const messageContainer = document.querySelector('#message-container');
