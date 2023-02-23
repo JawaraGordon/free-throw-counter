@@ -1,8 +1,9 @@
-// func to handle high scores
+const highScoreArr = [];
 
+// func to handle high scores
 const createHighScore = () => {
   // create a state management system for high scores
-  const highScoreArr = [];
+  
   let currentSessionHighScore = 0;
 
   // func to add score to high score arr
@@ -30,13 +31,22 @@ const createHighScore = () => {
   };
 };
 
-const highScoreManager = createHighScore();
-const scoreNum = document.getElementById('made').value;
-console.log('scoreNum',scoreNum);
-// add score to the handler
-highScoreManager.addScore(scoreNum);
 
-console.log('scores method',highScoreManager.scores);
+// select form from DOM
+const submitFormBtn = document.getElementById('form');
+console.log(submitFormBtn);
+
+// add event handler
+submitFormBtn.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const scoreNum = document.getElementById('made').value;
+const highScore = document.getElementById('high-score');
+  // add score to the handler
+  createHighScore().addScore(scoreNum);
+console.log('scoreNum',scoreNum);
+console.log('scoreArr',highScoreArr);
+});
+
 
 //   // fetch and display score from user input
 //   const scoreNum = document.getElementById('made').value;
