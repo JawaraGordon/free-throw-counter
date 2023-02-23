@@ -45,11 +45,6 @@ function freeThrowCounter(goal, made, missed) {
   const highScore = document.getElementById('high-score');
   highScore.append(scoreboard.count);
 
-  //   loop through arrays to log results for graph
-  //   for (let i = 0; i < freeThrowGoal.length; i++) {}
-  //   for (let i = 0; i < freeThrowMade.length; i++) {}
-  //   for (let i = 0; i < freeThrowMissed.length; i++) {}
-
   // select message div from DOM
   const message = document.querySelector('#message-container');
   //   conditional logic to display results message
@@ -79,7 +74,7 @@ function submitForm() {
   // block score and high-score from displaying more than once
   const score = document.getElementById('score');
   const highScore = document.getElementById('high-score');
-  // highScoreHandler()
+  highScoreHandler();
   if (score.innerText.length > 0) {
     score.innerText = '';
   }
