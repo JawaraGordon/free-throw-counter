@@ -1,4 +1,4 @@
-// create a func to handle high scores
+// func to handle high scores
 
 const createHighScore = () => {
   // create a state management system for high scores
@@ -14,12 +14,14 @@ const createHighScore = () => {
   };
   // search for highest score in arr
   const getHighScore = () => {
-    return Math.max(...scores);
+    console.log(highScoreArr);
+    return Math.max(...highScoreArr);
   };
 
   const getCurrentSessionHighScore = () => {
     return currentSessionHighScore;
   };
+
 
   return {
     addScore,
@@ -27,6 +29,14 @@ const createHighScore = () => {
     getCurrentSessionHighScore,
   };
 };
+
+const highScoreManager = createHighScore();
+const scoreNum = document.getElementById('made').value;
+console.log('scoreNum',scoreNum);
+// add score to the handler
+highScoreManager.addScore(scoreNum);
+
+console.log('scores method',highScoreManager.scores);
 
 //   // fetch and display score from user input
 //   const scoreNum = document.getElementById('made').value;
