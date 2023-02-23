@@ -1,4 +1,8 @@
 const highScoreArr = [];
+let scoreboard = new Score(0, 'Best Score:');
+
+const score = document.getElementById('best-score');
+score.append(scoreboard.message);
 
 // func to handle high scores
 const createHighScore = () => {
