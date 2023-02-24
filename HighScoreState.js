@@ -20,7 +20,7 @@ const createHighScore = () => {
   // search for highest score in arr
   const getHighScore = () => {
     const highScoreFromArr = Math.max(...highScoreArr);
-    console.log('inside func', highScoreFromArr);
+
     return highScoreFromArr;
   };
 
@@ -37,7 +37,6 @@ const createHighScore = () => {
 
 // select form from DOM
 const submitFormBtn = document.getElementById('form');
-console.log(submitFormBtn);
 
 // add event handler
 submitFormBtn.addEventListener('submit', function (e) {
@@ -52,11 +51,8 @@ submitFormBtn.addEventListener('submit', function (e) {
 
   // add score to the scoreboard
   createHighScore().addScore(scoreNum);
-  console.log('scoreNum', scoreNum);
-  console.log('scoreArr', highScoreArr);
+
   let highScoreFromArr = createHighScore().getHighScore();
-  console.log('highScore', highScore);
-  // if (highScoreFromArr > scoreNum) {
+
   highScore.append(highScoreFromArr);
-  // }
 });
