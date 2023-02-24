@@ -4,6 +4,12 @@ const makeChart = (goal, made, missed) => {
   const newScoreCanvas = document.createElement('canvas');
   newScoreCanvas.setAttribute('id', 'score-chart');
 
+  // destroy and remove chart if already existing
+  if (scoreChart) {
+    console.log('destroy');
+    destroyChart();
+  }
+
   scoreChartContainer.append(newScoreCanvas);
 
   const data = [{ goal: goal }, { made: made }, { missed: missed }];
