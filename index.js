@@ -29,11 +29,11 @@ function freeThrowCounter(goal, made, missed) {
   freeThrowMade.push(addToArray(made));
   freeThrowMissed.push(addToArray(missed));
 
-  // instantiate score obj display score
-  let scoreboard = new Score(0, 'High Score:');
+  // instantiate score obj display session score
+  let scoreboard = new Score(0, 'Game Score:');
 
-  const score = document.getElementById('score');
-  score.append(scoreboard.message);
+  const gameScoreMade = document.getElementById('game-score-made');
+  gameScoreMade.append(scoreboard.message);
 
   // array to handle made shots for scoreboard
   const madeResult = addToArray(made);
@@ -42,8 +42,8 @@ function freeThrowCounter(goal, made, missed) {
     scoreboard.increment();
   }
 
-  const highScore = document.getElementById('high-score');
-  highScore.append(scoreboard.count);
+  const gameScore = document.getElementById('game-score');
+  gameScore.append(scoreboard.count);
 
   // select message div from DOM
   const message = document.querySelector('#message-container');
@@ -72,23 +72,22 @@ form.addEventListener('submit', function (e) {
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
 
-  
-  // block score and high-score from displaying more than once
-  const score = document.getElementById('score');
-  const highScore = document.getElementById('high-score');
+  // block game score and from displaying more than once
+  const gameScoreMade = document.getElementById('game-score-made');
+  const gameScore = document.getElementById('game-score');
 
-  if (score.innerText.length > 0) {
-    score.innerText = '';
+  if (gameScoreMade.innerText.length > 0) {
+    gameScoreMade.innerText = '';
   }
-  if (highScore.innerText.length > 0) {
-    highScore.innerText = '';
+  if (gameScore.innerText.length > 0) {
+    gameScore.innerText = '';
   }
 
   // get the value of the input field
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
   const missed = document.getElementById('missed').value;
-  createHighScore()
+  // createHighScore();
   // add animations to forms and message board
   document.querySelector('.btn').classList.add('bounce-top');
   const messageContainer = document.querySelector('#message-container');
@@ -108,10 +107,10 @@ function resetArrays() {
 }
 // function to reset scoreboard
 function resetScoreboard() {
-  const highScore = document.getElementById('high-score');
+  const highScore = document.getElementById('game-score');
   highScore.innerText = '';
-  const score = document.getElementById('score');
-  score.innerText = '';
+  const gameScoreMade = document.getElementById('game-score-made');
+  gameScoreMade.innerText = '';
 }
 // select reset button
 const reset = document.querySelector('#reset');
