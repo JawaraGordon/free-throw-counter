@@ -35,23 +35,42 @@ body{
 
 .scoreboard{
     display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+.high-score-container{
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: 1rem;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    z-index: 3;
+    min-height: 28px;
+}
+.game-score-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     z-index: 3;
     min-height: 28px;
 }
 
+#high-score{
+    padding-left: .5rem;
+}
 #game-score{
-    padding-right: 1rem;
+    padding-left: .5rem;
 }
-#game-score-made{
-    padding-left: 8rem;
-}
+
 
 
 /* The switch - the box around the slider */
@@ -169,8 +188,8 @@ body{
     justify-content: center;
     align-items: center;
     margin: .3rem;
-    padding-top: 10%;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
     z-index: 1;
 }
 
@@ -280,4 +299,13 @@ body{
    text-decoration: none;
    color: black;
    z-index: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+    .scoreboard{
+        display: flex;
+        flex-direction: column;
+        padding-left: 8%;
+    }
 }
