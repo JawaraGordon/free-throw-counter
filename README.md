@@ -2,30 +2,32 @@
 
 ## Sure Shot! is a JavaScript application that helps basketball players track their free throw workouts.
 
-## The app allows users to set a goal for their free throw attempts then input their made and missed attempts using a form. The app gives the user feedback by displaying a message based on how well they did.
+## The app allows users to set a goal for their free throw attempts then input their made and missed attempts using a form. The app gives the user feedback by displaying a message based on how well they did. The app will keep track of and display your High Score along with your Game Score. You can view a chart that shows a bar graph of your goal, made and missed attempts.
 
 ## Features
 
 - Set a goal for free throw attempts
 - Input made and missed attempts
-- Track progress towards goal
-- View your progress on a dynamic bar graph chart
-- User-friendly interface
+- Try to beat your High Score
+- Track progress towards your goal
+- View progress on a dynamic bar graph chart
+- Get feedback on your performance with messages
+- Mobile responsive interface
 
 ## Version Updates
 
-### 0.1
+### 0.6
 
-- Added a Scoreboard that displays your made shots
-- Created a function that resets the high-score on reset
+- Added a state management system to kep track of your high score during a session
+- High Score resets on page reload
+- Added a Game Score section to the scoreboard that will display your score for that game only
+- Game Score resets when you click or tap the reset button
 
-### 0.2
+### 0.5
 
-- Updated the scoreboard to reset when the made shot input value is empty
-
-### 0.3
-
-- Added a chart that displays your free throw goal, made and missed attempts
+- Bug fixes:
+- Scoreboard spacing fixed
+- Toggle chart switch works on first attempt
 
 ### 0.4
 
@@ -33,11 +35,18 @@
 - Updated the high-score display to only show once
 - Updated the score display to only show once
 
-### 0.5
+### 0.3
 
-- Bug fixes:
-- Scoreboard spacing fixed
-- Toggle chart switch works on first attempt
+- Added a chart that displays your free throw goal, made and missed attempts
+
+### 0.2
+
+- Updated the scoreboard to reset when the made shot input value is empty
+
+### 0.1
+
+- Added a Scoreboard that displays your made shots
+- Created a function that resets the high-score on reset
 
 ### Getting Started
 
