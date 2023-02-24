@@ -43,13 +43,20 @@ console.log(submitFormBtn);
 submitFormBtn.addEventListener('submit', function (e) {
   e.preventDefault();
   const scoreNum = document.getElementById('made').value;
-  // const highScore = document.getElementById('high-score');
-  // add score to the scoreboard
+  const highScore = document.getElementById('high-score');
 
+  // prevent highscore from displaying more than once
+  if (highScore.innerText.length > 0) {
+    highScore.innerText = '';
+  }
+
+  // add score to the scoreboard
   createHighScore().addScore(scoreNum);
   console.log('scoreNum', scoreNum);
   console.log('scoreArr', highScoreArr);
-  let highScore = createHighScore().getHighScore();
+  let highScoreFromArr = createHighScore().getHighScore();
   console.log('highScore', highScore);
-  // highScore.append(scoreboard.count)
+  // if (highScoreFromArr > scoreNum) {
+  highScore.append(highScoreFromArr);
+  // }
 });

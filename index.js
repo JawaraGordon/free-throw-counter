@@ -71,7 +71,8 @@ form.addEventListener('submit', function (e) {
 });
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
-  // block score and high-score from displaying more than once
+
+  // block game score and from displaying more than once
   const gameScoreMade = document.getElementById('game-score-made');
   const gameScore = document.getElementById('game-score');
 
