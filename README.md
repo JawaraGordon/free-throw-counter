@@ -61,21 +61,15 @@
 - Added a Scoreboard that displays your made shots
 - Created a function that resets the high-score on reset
 
-### Getting Started
+### Languages
 
-Play the live demo here: https://jawaragordon.github.io/free-throw-counter/
-
-Clone the repository here:
-git clone https://github.com/JawaraGordon/free-throw-counter
-
-Built With
 JavaScript
 HTML
 CSS
 
 ### Contributing
 
-•Fork the repository
+•Fork or clone the repository: git clone https://github.com/JawaraGordon/free-throw-counter
 
 •Create your feature branch (git checkout -b feature/new-feature)
 
