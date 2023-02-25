@@ -5,7 +5,7 @@ const makeChart = (goal, made, missed) => {
   newScoreCanvas.setAttribute('id', 'score-chart');
 
   // destroy and remove chart if already existing
-  if (scoreChart) {
+  if (scoreChart === true) {
     console.log('destroy');
     destroyChart();
   }

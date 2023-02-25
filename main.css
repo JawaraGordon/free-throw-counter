@@ -233,6 +233,11 @@ body{
     z-index: 1;
 }
 
+input[type=text], input[type=button] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    }
+
 .btn-container{
     display: flex;
     flex-direction: row;
