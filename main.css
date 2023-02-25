@@ -36,6 +36,8 @@ body{
 .scoreboard{
     display: flex;
     flex-direction: column;
+    font-weight: 700;
+    font-size: 1.3rem;
     padding-right: 2rem;
 }
 
@@ -46,8 +48,6 @@ body{
     align-items: flex-start;
     margin-left: 1rem;
     margin-top: 1rem;
-    font-weight: 700;
-    font-size: 1.3rem;
     z-index: 3;
     min-height: 28px;
 }
@@ -58,8 +58,6 @@ body{
     align-items: flex-start;
     margin-left: 1rem;
     margin-top: 1rem;
-    font-weight: 700;
-    font-size: 1.3rem;
     z-index: 3;
     min-height: 28px;
 }
