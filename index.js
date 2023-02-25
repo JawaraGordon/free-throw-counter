@@ -74,6 +74,9 @@ function submitForm() {
   // block game score and from displaying more than once
   const gameScoreMade = document.getElementById('game-score-made');
   const gameScore = document.getElementById('game-score');
+  // add animation to scoreboard container
+  const scoreBoardContainer = document.querySelector('.scoreboard');
+  scoreBoardContainer.classList.add('fade-in');
 
   if (gameScoreMade.innerText.length > 0) {
     gameScoreMade.innerText = '';
@@ -81,8 +84,6 @@ function submitForm() {
   if (gameScore.innerText.length > 0) {
     gameScore.innerText = '';
   }
-
-  
 
   // get the value of the input field
   const goal = document.getElementById('goal').value;
@@ -115,10 +116,12 @@ function resetScoreboard() {
 }
 // select reset button
 const reset = document.querySelector('#reset');
-// add reset event handler for arrays message, inputs and chart
+// add reset event handler for arrays message, inputs, chart and animation
 reset.addEventListener('click', function () {
   resetArrays();
   resetScoreboard();
+  const scoreBoardContainer = document.querySelector('.scoreboard');
+  scoreBoardContainer.classList.remove('fade-in');
   document.querySelector('#message-container').innerHTML = '';
   document
     .querySelector('#message-container')
