@@ -2,6 +2,8 @@
 
 ## Sure Shot! is a JavaScript application that helps basketball players track their free throw workouts.
 
+## Play a live demo here: https://jawaragordon.github.io/free-throw-counter/
+
 ## About
 
 - Allows users to set a goal for their free throw attempts then input their made and missed attempts using a form.
