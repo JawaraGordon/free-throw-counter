@@ -34,55 +34,39 @@ body{
 }
 
 .scoreboard{
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
     display: flex;
     flex-direction: column;
-    align-content: space-around;
-    border: 5px solid black;
-    background-color: rgba(255,255,255,0.5);
-    width: 35%;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding-right: 2rem;
 }
 
 .high-score-container{
-    
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: .5rem;
-    padding-right: .8rem;
+    margin-left: 1rem;
     margin-top: 1rem;
-    margin-right: 1rem;
     z-index: 3;
     min-height: 28px;
-    
 }
 .game-score-container{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: .5rem;
-    padding-right: .8rem;
+    margin-left: 1rem;
     margin-top: 1rem;
-    margin-right: 1rem;
     z-index: 3;
     min-height: 28px;
 }
 
 #high-score{
-    padding: .5rem;
-    border: 5px solid black;
+    padding-left: .5rem;
 }
 #game-score{
-    padding: .5rem;
-    border: 5px solid black;
+    padding-left: .5rem;
 }
 
 
