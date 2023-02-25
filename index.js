@@ -71,7 +71,6 @@ form.addEventListener('submit', function (e) {
 });
 // create submit event handler / add inputs to counter and makes chart
 function submitForm() {
-
   // block game score and from displaying more than once
   const gameScoreMade = document.getElementById('game-score-made');
   const gameScore = document.getElementById('game-score');
@@ -82,6 +81,8 @@ function submitForm() {
   if (gameScore.innerText.length > 0) {
     gameScore.innerText = '';
   }
+
+  
 
   // get the value of the input field
   const goal = document.getElementById('goal').value;
@@ -176,8 +177,6 @@ const toggleChart = () => {
     }
   });
 };
-
-// toggle chart eventHandler
 
 toggleChart();
 initDivs();
