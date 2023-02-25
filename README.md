@@ -63,9 +63,9 @@
 
 ### Languages
 
-JavaScript
-HTML
-CSS
+- JavaScript
+- HTML
+- CSS
 
 ### Contributing
 
