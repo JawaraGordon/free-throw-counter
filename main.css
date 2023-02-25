@@ -232,7 +232,7 @@ body{
     border-radius: 1rem;
     z-index: 1;
 }
-
+/* reset default safari button styling */
 input[type=text], input[type=button] {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
