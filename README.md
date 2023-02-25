@@ -23,6 +23,12 @@
 - Added a Game Score section to the scoreboard that will display your score for that game only
 - Game Score resets when you click or tap the reset button
 
+### 0.6
+
+- Bug fixes:
+- Reset button styling fixed for iOS devices
+- Auto-zoom on input disabled for iOS devices
+
 ### 0.5
 
 - Bug fixes:
