@@ -6,10 +6,8 @@ const makeChart = (goal, made, missed) => {
 
   // destroy and remove chart if already existing
   if (scoreChart === true) {
-    console.log('destroy');
     destroyChart();
   }
-
   scoreChartContainer.append(newScoreCanvas);
 
   const data = [{ goal: goal }, { made: made }, { missed: missed }];

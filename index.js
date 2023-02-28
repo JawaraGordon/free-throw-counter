@@ -10,7 +10,6 @@ const initDivs = () => {
   message.classList.add('show');
   form.classList.add('show');
 };
-
 // function to handle goal, made, and missed TFs
 function freeThrowCounter(goal, made, missed) {
   // function to add numbers to arrays
@@ -61,7 +60,6 @@ function freeThrowCounter(goal, made, missed) {
     message.innerHTML = 'Not bad, but keep practicing.';
   }
 }
-
 // select form from DOM
 const form = document.getElementById('form');
 // add event handler
@@ -89,7 +87,7 @@ function submitForm() {
   const goal = document.getElementById('goal').value;
   const made = document.getElementById('made').value;
   const missed = document.getElementById('missed').value;
-  // createHighScore();
+  
   // add animations to forms and message board
   document.querySelector('.btn').classList.add('bounce-top');
   const messageContainer = document.querySelector('#message-container');
@@ -136,12 +134,9 @@ reset.addEventListener('click', function () {
 
   destroyChart();
 });
-
-// function with conditional to reset made input value === ''
+// function with conditional to reset when made input value === ''
 const resetScoreboardValues = () => {
-  const goal = document.querySelector('#goal').value;
   const made = document.querySelector('#made').value;
-  const missed = document.querySelector('#missed').value;
 
   if (made === '') {
     setTimeout(() => {
@@ -150,12 +145,21 @@ const resetScoreboardValues = () => {
     }, 1000);
   }
 };
+// function with conditional to reset chart when made input value === ''
+const resetChart = () => {
+  const made = document.querySelector('#made').value;
 
-// timer that will reset scoreboard values after 1 second if input value for made === ''
+  if (made === '') {
+    setTimeout(() => {
+      destroyChart();
+    }, 1000);
+  }
+};
+// timer that will reset scoreboard and chart values after 1 second if input value for made === ''
 setInterval(() => {
   resetScoreboardValues();
+  resetChart();
 }, 1000);
-
 // toggles score chart view / shows & hides message board
 const toggleChart = () => {
   const chartToggle = document.querySelector('#chart-toggle');
@@ -180,6 +184,5 @@ const toggleChart = () => {
     }
   });
 };
-
 toggleChart();
 initDivs();
