@@ -25,8 +25,9 @@
 
 ### 0.6
 
-- Added a state management system to kep track of your high score during a session
+- Added a state management system to keep track of your high score during a session
 - High Score resets on page reload
+- Chart resets when game resets or if score === ''
 - Added a Game Score section to the scoreboard that will display your score for that game only
 - Game Score resets when you click or tap the reset button
 
